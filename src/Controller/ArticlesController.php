@@ -5,6 +5,13 @@ namespace App\Controller;
 
 class ArticlesController extends AppController
 {
+    public function initialize()
+    {
+        parent::initialize();
+
+        $this->loadComponent('Flash'); // Inclui o FlashComponent
+    }
+
 
     public function index()
     {
