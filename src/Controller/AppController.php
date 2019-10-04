@@ -52,4 +52,8 @@ class AppController extends Controller
          */
         //$this->loadComponent('Security');
     }
+    public function beforeFilter(\Cake\Event\Event $event)
+    {
+        $this->viewBuilder()->setLayout('home');
+    }
 }
