@@ -1,7 +1,4 @@
-# CakePHP Application Skeleton
-
-[![Build Status](https://img.shields.io/travis/cakephp/app/master.svg?style=flat-square)](https://travis-ci.org/cakephp/app)
-[![Total Downloads](https://img.shields.io/packagist/dt/cakephp/app.svg?style=flat-square)](https://packagist.org/packages/cakephp/app)
+# CakePHP CMS simple example
 
 A skeleton for creating applications with [CakePHP](https://cakephp.org) 3.x.
 
@@ -33,11 +30,12 @@ bin/cake server -p 8765
 
 Then visit `http://localhost:8765` to see the welcome page.
 
-## Update
+## Project setup
 
-Since this skeleton is a starting point for your application and various files
-would have been modified as per your needs, there isn't a way to provide
-automated upgrades, so you have to do any updates manually.
+After clone this repository running this following command to install all project dependencies.
+```
+npm install
+```
 
 ## Configuration
 
@@ -45,7 +43,12 @@ Read and edit `config/app.php` and setup the `'Datasources'` and any other
 configuration relevant for your application.
 
 ## Layout
+For layout iam using bootstrap 4
 
-The app skeleton uses a subset of [Foundation](http://foundation.zurb.com/) (v5) CSS
-framework by default. You can, however, replace it with any other library or
-custom styles.
+## Demonstration 
+![](funcionando.gif)
+
+Get in Touch
+===============
+
+I am available facebook **brunojamelli9** , linkedin **bruno-jamelli** and gmail **@brunogeek9**
