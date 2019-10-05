@@ -14,7 +14,7 @@
  * @license       https://opensource.org/licenses/mit-license.php MIT License
  */
 
-$cakeDescription = 'CakePHP: the rapid development php framework';
+$cakeDescription = 'Articles';
 ?>
 <!DOCTYPE html>
 <html>
@@ -53,30 +53,36 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
         </div>
     </nav> -->
     <!-- Só uma imagem -->
-
-    <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="/myblog/articles">Artigos</a>
-        <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
-            <span class="navbar-toggler-icon"></span>
-        </button>
-        <div class="collapse navbar-collapse" id="navbarNav">
-            <ul class="navbar-nav">
-                <li class="nav-item active">
-                    <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="/myblog/articles/add">cadastrar artigo</a>
-                </li>
-            </ul>
+    <div class="card text-center">
+        <div class="card-header">
+            <h3>Articles</h3>
         </div>
-    </nav>
-
-    <?= $this->Flash->render() ?>
-    <div class="container clearfix">
-        <?= $this->fetch('content') ?>
+        <nav class="navbar navbar-expand-lg navbar-light bg-light">
+            <a class="navbar-brand" href="/myblog/articles">Artigos</a>
+            <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
+                <span class="navbar-toggler-icon"></span>
+            </button>
+            <div class="collapse navbar-collapse" id="navbarNav">
+                <ul class="navbar-nav">
+                    <li class="nav-item active">
+                        <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
+                    </li>
+                    <li class="nav-item">
+                        <a class="nav-link" href="/myblog/articles/add">cadastrar artigo</a>
+                    </li>
+                </ul>
+            </div>
+        </nav>
+        
+        <div class="card-body" style="height: 50rem;">
+            
+            <?= $this->Flash->render() ?>
+            <div class="container clearfix">
+                <?= $this->fetch('content') ?>
+            </div>
+        </div>
+        
     </div>
-    <footer>
-    </footer>
     <script>
     </script>
 </body>

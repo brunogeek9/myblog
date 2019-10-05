@@ -1,12 +1,13 @@
 
-<h1>Blog articles</h1>
+<h2>Blog articles</h2>
 
 <?= $this->Html->link('Adicionar artigo', ['action' => 'add']) ?>
-<table class="table">
+<table class="table table-striped">
     <tr>
         <th>Id</th>
         <th>Title</th>
         <th>Created</th>
+        <th>Operations</th>
     </tr>
 
     <!-- Aqui é onde iremos iterar nosso objeto de solicitação $articles, exibindo informações de artigos -->
@@ -20,6 +21,7 @@
             <td>
                 <?= $article->created->format(DATE_RFC850) ?>
             </td>
+            
             <td>
                 <?= $this->Form->postLink(
                         'Deletar',
