@@ -31,13 +31,12 @@ class ArticlesController extends AppController
         if ($this->request->is('post')) {
             $article = $this->Articles->patchEntity($article, $this->request->getData());
             if ($this->Articles->save($article)) {
-                // $this->Flash->success(__('Seu artigo foi salvo.'));
                 $this->Flash->flash('Artigo salvo', [
                     'params' => [
                     'type' => 'success'
                     ]
                     ]);
-                // $this->BootsCakeFlash->render();
+                
             }
             // $this->Flash->error(__('Não é possível adicionar o seu artigo.'));
         }
@@ -50,7 +49,11 @@ class ArticlesController extends AppController
         if ($this->request->is(['post', 'put'])) {
             $this->Articles->patchEntity($article, $this->request->getData());
             if ($this->Articles->save($article)) {
-                $this->Flash->success(__('Seu artigo foi atualizado.'));
+                $this->Flash->flash('Seu artigo foi atualizado.', [
+                    'params' => [
+                    'type' => 'success'
+                    ]
+                    ]);
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('Seu artigo não pôde ser atualizado.'));
