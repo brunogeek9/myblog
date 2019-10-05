@@ -32,9 +32,9 @@ class ArticlesController extends AppController
             $article = $this->Articles->patchEntity($article, $this->request->getData());
             if ($this->Articles->save($article)) {
                 $this->Flash->success(__('Seu artigo foi salvo.'));
-                return $this->redirect(['action' => 'index']);
+                // $this->BootsCakeFlash->render();
             }
-            $this->Flash->error(__('Não é possível adicionar o seu artigo.'));
+            // $this->Flash->error(__('Não é possível adicionar o seu artigo.'));
         }
         $this->set('article', $article);
     }
@@ -60,6 +60,7 @@ class ArticlesController extends AppController
 
         $article = $this->Articles->get($id);
         if ($this->Articles->delete($article)) {
+            // $this->BootsCakeFlash->render();
             $this->Flash->success(__('O artigo com id: {0} foi deletado.', h($id)));
             return $this->redirect(['action' => 'index']);
         }

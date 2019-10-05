@@ -55,7 +55,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
     <!-- Só uma imagem -->
 
     <nav class="navbar navbar-expand-lg navbar-light bg-light">
-        <a class="navbar-brand" href="#">Artigos</a>
+        <a class="navbar-brand" href="/myblog/articles">Artigos</a>
         <button class="navbar-toggler" type="button" data-toggle="collapse" data-target="#navbarNav" aria-controls="navbarNav" aria-expanded="false" aria-label="Alterna navegação">
             <span class="navbar-toggler-icon"></span>
         </button>
@@ -65,13 +65,7 @@ $cakeDescription = 'CakePHP: the rapid development php framework';
                     <a class="nav-link" href="#">Home <span class="sr-only">(Página atual)</span></a>
                 </li>
                 <li class="nav-item">
-                    <a class="nav-link" href="#">Destaques</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link" href="#">Preços</a>
-                </li>
-                <li class="nav-item">
-                    <a class="nav-link disabled" href="#">Desativado</a>
+                    <a class="nav-link" href="/myblog/articles/add">cadastrar artigo</a>
                 </li>
             </ul>
         </div>
