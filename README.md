@@ -34,7 +34,7 @@ Then visit `http://localhost:8765` to see the welcome page.
 
 After clone this repository running this following command to install all project dependencies.
 ```
-npm install
+composer install
 ```
 
 ## Configuration
@@ -51,4 +51,4 @@ For layout iam using bootstrap 4
 Get in Touch
 ===============
 
-I am available facebook **brunojamelli9** , linkedin **bruno-jamelli** and gmail **@brunogeek9**
+I am available facebook **brunojamelli9** linkedin **bruno-jamelli** gmail **@brunogeek9**
