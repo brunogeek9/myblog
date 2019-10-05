@@ -77,6 +77,7 @@ $cakeDescription = 'Articles';
         <div class="card-body" style="height: 50rem;">
             
             <?= $this->Flash->render() ?>
+            
             <div class="container clearfix">
                 <?= $this->fetch('content') ?>
             </div>

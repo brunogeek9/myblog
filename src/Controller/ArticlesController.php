@@ -31,7 +31,12 @@ class ArticlesController extends AppController
         if ($this->request->is('post')) {
             $article = $this->Articles->patchEntity($article, $this->request->getData());
             if ($this->Articles->save($article)) {
-                $this->Flash->success(__('Seu artigo foi salvo.'));
+                // $this->Flash->success(__('Seu artigo foi salvo.'));
+                $this->Flash->flash('Artigo salvo', [
+                    'params' => [
+                    'type' => 'success'
+                    ]
+                    ]);
                 // $this->BootsCakeFlash->render();
             }
             // $this->Flash->error(__('Não é possível adicionar o seu artigo.'));
