@@ -33,10 +33,10 @@ class ArticlesController extends AppController
             if ($this->Articles->save($article)) {
                 $this->Flash->flash('Artigo salvo', [
                     'params' => [
-                    'type' => 'success'
+                        'type' => 'success'
                     ]
-                    ]);
-                
+                ]);
+                return $this->redirect(['action' => 'index']);
             }
             // $this->Flash->error(__('Não é possível adicionar o seu artigo.'));
         }
@@ -51,9 +51,9 @@ class ArticlesController extends AppController
             if ($this->Articles->save($article)) {
                 $this->Flash->flash('Seu artigo foi atualizado.', [
                     'params' => [
-                    'type' => 'success'
+                        'type' => 'success'
                     ]
-                    ]);
+                ]);
                 return $this->redirect(['action' => 'index']);
             }
             $this->Flash->error(__('Seu artigo não pôde ser atualizado.'));
@@ -68,8 +68,12 @@ class ArticlesController extends AppController
 
         $article = $this->Articles->get($id);
         if ($this->Articles->delete($article)) {
-            // $this->BootsCakeFlash->render();
-            $this->Flash->success(__('O artigo com id: {0} foi deletado.', h($id)));
+            // $this->Flash->success(__('O artigo com id: {0} foi deletado.', h($id)));
+            $this->Flash->flash('Artigo deletado', [
+                'params' => [
+                    'type' => 'warning'
+                ]
+            ]);
             return $this->redirect(['action' => 'index']);
         }
     }
